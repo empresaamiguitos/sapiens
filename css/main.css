@@ -3,12 +3,28 @@
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.3); }
 
-#menu .navbar-brand img {
-  width: 160px;
-  height: 60px; }
-#menu .navbar-collapse .nav-item .nav-link {
-  color: #FFFFFF;
-  font-size: 18pt; }
+#menu {
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+  #menu .navbar-brand img {
+    width: 160px;
+    height: 60px;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+  #menu .navbar-collapse .nav-item .nav-link {
+    color: #FFFFFF;
+    font-size: 18pt;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
 
 #header {
   width: 100%;
@@ -28,9 +44,36 @@
     font-size: 15pt; }
   #header .formulario {
     position: absolute;
-    right: 10%;
+    right: 8%;
     width: 400px;
-    height: 500px; }
+    height: 500px;
+    top: 15%;
+    color: #FFFFFF; }
+    #header .formulario form {
+      padding: 30px 30px 10px 30px; }
+      #header .formulario form .form-group {
+        justify-content: center; }
+        #header .formulario form .form-group label {
+          font-size: 18pt;
+          font-family: "Source Sans Pro", sans-serif; }
+        #header .formulario form .form-group input, #header .formulario form .form-group textarea {
+          display: inline-block;
+          align-self: center;
+          text-align: center;
+          background: #1a5276;
+          border-color: #99a3a4;
+          color: #FFFFFF;
+          -webkit-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+          #header .formulario form .form-group input:focus, #header .formulario form .form-group textarea:focus {
+            background: #2980b9;
+            border-color: #FFFFFF;
+            box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6); }
+          #header .formulario form .form-group input::placeholder, #header .formulario form .form-group textarea::placeholder {
+            color: #FFFFFF; }
 
 #contenido {
   background-color: #1a5276; }
