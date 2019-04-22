@@ -17,7 +17,7 @@
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s; }
-  #menu .navbar-collapse .nav-item .nav-link {
+  #menu .navbar-collapse .nav-item a.nav-link {
     color: #FFFFFF;
     font-size: 18pt;
     -webkit-transition: all 0.5s;
@@ -25,6 +25,10 @@
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s; }
+    #menu .navbar-collapse .nav-item a.nav-link:hover {
+      border: 1px solid #c0392b;
+      border-radius: 10px;
+      font-size: 16pt; }
 
 #header {
   width: 100%;
@@ -42,6 +46,8 @@
     width: 500px;
     color: #FFFFFF;
     font-size: 15pt; }
+    #header .card .card-text {
+      border-top: 2px solid #c0392b; }
   #header .formulario {
     position: absolute;
     right: 8%;
@@ -50,12 +56,12 @@
     top: 15%;
     color: #FFFFFF; }
     #header .formulario form {
-      padding: 30px 30px 10px 30px; }
+      padding: 30px 30px 10px 30px;
+      font-family: "Source Sans Pro", sans-serif; }
       #header .formulario form .form-group {
         justify-content: center; }
         #header .formulario form .form-group label {
-          font-size: 18pt;
-          font-family: "Source Sans Pro", sans-serif; }
+          font-size: 18pt; }
         #header .formulario form .form-group input, #header .formulario form .form-group textarea {
           display: inline-block;
           align-self: center;
@@ -74,6 +80,11 @@
             box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6); }
           #header .formulario form .form-group input::placeholder, #header .formulario form .form-group textarea::placeholder {
             color: #FFFFFF; }
+      #header .formulario form button.btn {
+        color: #FFFFFF;
+        background-color: #1a5276; }
+        #header .formulario form button.btn:hover {
+          background-color: #c0392b; }
 
 #contenido {
   background-color: #1a5276; }

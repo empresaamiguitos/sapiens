@@ -14,23 +14,33 @@
         height: 300px
         width: 500px
         color: $blanco
-        font-size: 15pt 
-        @extend %fondoPlomo    
+        font-size: 15pt
+
+        @extend %fondoPlomo
+        .card-text
+            border-top: 2px solid $guindo
+
     .formulario
         position: absolute
         right: 8%
         width: 400px
         height: 500px
         top: 15%
+
         @extend %fondoPlomo
+
         color: $blanco
+
         form
             padding: 30px 30px 10px 30px
+            font-family: "Source Sans Pro", sans-serif
+
             .form-group
                 justify-content: center
+
                 label
                     font-size: 18pt
-                    font-family: 'Source Sans Pro', sans-serif
+
                 input, textarea
                     display: inline-block
                     align-self: center
@@ -38,11 +48,18 @@
                     background: $azul-marino
                     border-color: $plomo
                     color: $blanco
-                    +transition(all .5s)
+
+                    +transition(all 0.5s)
+
                     &:focus
                         background: $azul2
                         border-color: $blanco
-                        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6)
+                        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(255, 144, 0, 0.6)
+
                     &::placeholder
                         color: $blanco
-        
+            button.btn
+                color: $blanco
+                background-color: $azul-marino
+                &:hover
+                    background-color: $guindo

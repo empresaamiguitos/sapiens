@@ -66,7 +66,7 @@
                         Curos de preparación y desarrollo profesional, conoce los cursos que brindamos.
                     </p>
                     <p>
-                        Aprende, Mejora Conocimientos y Actualizate.
+                        Aprende, Mejora Conocimientos y Actualízate.
                     </p>
                 </p>
             </div>
@@ -87,7 +87,7 @@
                     <label for="exampleFormControlTextarea1">Mensaje</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Ingrese el mesaje o consulta que tenga para nosotros"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn">Enviar</button>
             </form>
         </div>
     </div>
