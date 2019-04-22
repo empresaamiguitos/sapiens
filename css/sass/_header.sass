@@ -17,8 +17,22 @@
         font-size: 15pt
 
         @extend %fondoPlomo
+
+        +transition(all 0.5s)
+
+        &:hover
+            border-color: $guindo
+
         .card-text
-            border-top: 2px solid $guindo
+            border-top: 2px solid $plomo
+
+            +transition(all 0.5s)
+
+        &:hover
+            border-color: $guindo
+
+            .card-text
+                border-top: 2px solid $guindo
 
     .formulario
         position: absolute
@@ -30,10 +44,12 @@
         @extend %fondoPlomo
 
         color: $blanco
+        +transition(all 0.5s)
 
         form
             padding: 30px 30px 10px 30px
             font-family: "Source Sans Pro", sans-serif
+
 
             .form-group
                 justify-content: center
@@ -58,8 +74,15 @@
 
                     &::placeholder
                         color: $blanco
+
             button.btn
                 color: $blanco
                 background-color: $azul-marino
+
+                +transition(all 0.5s)
+
                 &:hover
                     background-color: $guindo
+
+        &:hover
+            border-color: $guindo
