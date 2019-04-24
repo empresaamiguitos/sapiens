@@ -1,7 +1,16 @@
 #header .card, #header .formulario {
   border: 2px solid #99a3a4;
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px #FFFFFF; }
+  #header .card:hover, #header .formulario:hover {
+    border-color: #0a2885;
+    box-shadow: 5px 5px 20px #0a2885;
+    -webkit-transform: translate(-5px);
+    -ms--transform: translate(-5px);
+    -moz--transform: translate(-5px);
+    -o--transform: translate(-5px);
+    -transform: translate(-5px); }
 
 #menu {
   -webkit-transition: all 0.5s;
@@ -37,6 +46,8 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.25);
   text-align: center; }
   #header .card {
     position: absolute;
@@ -51,19 +62,13 @@
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s; }
-    #header .card:hover {
-      border-color: #c0392b; }
     #header .card .card-text {
-      border-top: 2px solid #99a3a4;
+      border-top: 2px solid #FFFFFF;
       -webkit-transition: all 0.5s;
       -ms-transition: all 0.5s;
       -moz-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s; }
-    #header .card:hover {
-      border-color: #c0392b; }
-      #header .card:hover .card-text {
-        border-top: 2px solid #c0392b; }
   #header .formulario {
     position: absolute;
     right: 8%;
@@ -111,8 +116,6 @@
         transition: all 0.5s; }
         #header .formulario form button.btn:hover {
           background-color: #c0392b; }
-    #header .formulario:hover {
-      border-color: #c0392b; }
 
 #contenido {
   background-color: #1a5276; }

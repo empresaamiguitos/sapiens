@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Sapiens</title>
 </head>
 <body>
@@ -34,8 +35,12 @@
                         Cursos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">CONTADURÍA PUBLICA</a>
+
+                        <a class="dropdown-item" href="#"></a>
                         <div class="dropdown-divider"></div>
+
+
+
                         <a class="dropdown-item" href="#">DERECHO</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">ELABORACIÓN DE TESIS</a>
@@ -144,5 +149,9 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="./js/main.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
 </body>
 </html>

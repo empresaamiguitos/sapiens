@@ -5,6 +5,8 @@
     background-position: center
     background-size: cover
     background-attachment: fixed
+    background-blend-mode: multiply
+    background-color: rgba($negro, 0.25)
     text-align: center
 
     .card
@@ -20,19 +22,10 @@
 
         +transition(all 0.5s)
 
-        &:hover
-            border-color: $guindo
-
         .card-text
-            border-top: 2px solid $plomo
+            border-top: 2px solid $blanco
 
             +transition(all 0.5s)
-
-        &:hover
-            border-color: $guindo
-
-            .card-text
-                border-top: 2px solid $guindo
 
     .formulario
         position: absolute
@@ -84,5 +77,3 @@
                 &:hover
                     background-color: $guindo
 
-        &:hover
-            border-color: $guindo
