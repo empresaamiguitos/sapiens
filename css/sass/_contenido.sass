@@ -1,2 +1,31 @@
 #contenido
-    background-color: $azul-marino
+    background-color: $blanco
+    font-family: "Titillium Web", sans-serif
+
+    .card
+        text-align: center
+        box-shadow: 5px 5px 10px $plomo
+        +transition(all .3s)
+        .card-body
+            h5
+                height: 90px
+                text-transform: uppercase
+        img
+            border-bottom: 3.5px solid
+            &.color1
+                border-color: $color1
+
+            &.color2
+                border-color: $color2
+
+            &.color3
+                border-color: $color3
+        &:hover
+            box-shadow: 2px 2px 5px $plomo
+
+    h1
+        font-size: 40pt
+        margin-top: 50px
+    p
+        font-size: 16pt
+

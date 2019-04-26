@@ -51,7 +51,7 @@
   text-align: center; }
   #header .card {
     position: absolute;
-    left: 10%;
+    left: 8%;
     top: 200px;
     height: 300px;
     width: 500px;
@@ -116,8 +116,51 @@
         transition: all 0.5s; }
         #header .formulario form button.btn:hover {
           background-color: #c0392b; }
+  #header .verAbajo {
+    position: relative;
+    color: #FFFFFF;
+    top: 90%;
+    text-align: centerz; }
 
 #contenido {
-  background-color: #1a5276; }
+  background-color: #FFFFFF;
+  font-family: "Titillium Web", sans-serif; }
+  #contenido .card {
+    text-align: center;
+    box-shadow: 5px 5px 10px #99a3a4;
+    -webkit-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    #contenido .card .card-body h5 {
+      height: 90px;
+      text-transform: uppercase; }
+    #contenido .card img {
+      border-bottom: 3.5px solid; }
+      #contenido .card img.color1 {
+        border-color: red; }
+      #contenido .card img.color2 {
+        border-color: blue; }
+      #contenido .card img.color3 {
+        border-color: green; }
+    #contenido .card:hover {
+      box-shadow: 2px 2px 5px #99a3a4; }
+  #contenido h1 {
+    font-size: 40pt;
+    margin-top: 50px; }
+  #contenido p {
+    font-size: 16pt; }
+
+#porque {
+  margin-top: 80px; }
+  #porque h1 {
+    margin-bottom: 30px; }
+  #porque .contenedor .icono {
+    padding: 8px;
+    font-size: 35pt; }
+    #porque .contenedor .icono i {
+      border-radius: 50%;
+      background-color: #f4f6f6; }
 
 /*# sourceMappingURL=main.css.map */
