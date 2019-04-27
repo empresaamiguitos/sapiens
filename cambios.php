@@ -36,7 +36,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Modificación de cursos</h5>
                         <p class="card-text">En esta sección podrás adicionar, eliminar y modificar cursos que necesita.</p>
-                        <a href="#" class="btn btn-primary">Cambiar cursos</a>
+                        <a href="./cambioCursos.php" class="btn btn-primary">Cambiar cursos</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Actividades</h5>
                         <p class="card-text">En esta sección podrás adicionar, eliminar y modificar las fotos de las actividades que desea que se muestre en la página.</p>
-                        <a href="#" class="btn btn-primary">Cambiar actividades</a>
+                        <a href="./cambioActividades.php" class="btn btn-primary">Cambiar actividades</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Modificación de perdonal</h5>
                         <p class="card-text">En esta sección podrás adicionar, eliminar y modificar el personal, desde los fundadores, hasta los docentes que tiene.</p>
-                        <a href="#" class="btn btn-primary">Cambiar docentes</a>
+                        <a href="./cambioPersonal.php" class="btn btn-primary">Cambiar docentes</a>
                     </div>
                 </div>
             </div>
