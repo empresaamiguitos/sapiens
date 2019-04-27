@@ -1,6 +1,6 @@
 
 <?php
-
+//  Las instrucciones estan en la linea 114
 
 ?>
 <!DOCTYPE html>
@@ -107,40 +107,58 @@
         </div>
         <div class="row">
             <div class="col-md-3">
+
+
+
+
+<!-- Desde aca va dentro del while -->
+<!-- Las modificaciones van donde hay comentarios...
+dice donde tienes que hacer modificaciones y que necesitamos mostrar -->
+<!-- Las modificaciones son en las lineas: 120, 124, 127, 133, 138, 146. -->
                 <div class="card">
-                    <img src="https://www.mistica.es/images/img/estructura/aula-magna-asientos.jpg" class="card-img-top color1">
+                    <img src="
+                    <!-- En esta sección va la imagen -->
+                    ">
                     <div class="card-body">
-                        <h5 class="card-title">Derecho</h5>
-                        <a href="#" class="btn btn-primary">Conoce más</a>
+                        <h5 class="card-title">
+                            <!-- En esta parte mostrar el nombre del curso -->
+                        </h5>
+                        <!-- En la parte de abajo se modifica los cursos -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<!-- En esta sección va el ID del curso -->">
+                        Conoce más
+                        </button>
+
+                        <!-- Modal -->
+                        <!-- En la parte de abajo se modifica los cursos -->
+                        <div class="modal fade bd-example-modal-lg" id="<!-- En esta sección va el ID del curso -->" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                    <!-- Nombre del curso mostrado con php "echo array[0]", algo asi -->
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <embed src="
+                                <!-- En esta linea mostramos lo que se guarda en el contenido del curso -->
+                                " type="application/pdf" width="100%" height="600px" />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="https://www.mistica.es/images/img/estructura/aula-magna-asientos.jpg" class="card-img-top color2">
-                    <div class="card-body">
-                        <h5 class="card-title">Administración de empresas</h5>
-                        <a href="#" class="btn btn-primary">Conoce más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="https://www.mistica.es/images/img/estructura/aula-magna-asientos.jpg" class="card-img-top color3">
-                    <div class="card-body">
-                        <h5 class="card-title">ELABORACIÓN de tesis</h5>
-                        <a href="#" class="btn btn-primary">Conoce más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="https://www.mistica.es/images/img/estructura/aula-magna-asientos.jpg" class="card-img-top color3">
-                    <div class="card-body">
-                        <h5 class="card-title">ELABORACIÓN de tesis</h5>
-                        <a href="#" class="btn btn-primary">Conoce más</a>
-                    </div>
-                </div>
+<!-- Htasta aqui va el while -->
+
+
+
+
             </div>
         </div>
     </div>
@@ -193,6 +211,39 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img class="d-block w-100" src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
             </div>
         </div>
     </div>

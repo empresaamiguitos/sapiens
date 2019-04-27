@@ -17,7 +17,8 @@
   -ms-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  font-family: "Montserrat" sans-serif; }
   #menu .navbar-brand img {
     width: 160px;
     height: 60px;
@@ -35,9 +36,11 @@
     -o-transition: all 0.5s;
     transition: all 0.5s; }
     #menu .navbar-collapse .nav-item a.nav-link:hover {
-      border: 1px solid #c0392b;
-      border-radius: 10px;
-      font-size: 16pt; }
+      -webkit-animation: onda 2s;
+      -ms-animation: onda 2s;
+      -moz-animation: onda 2s;
+      -o-animation: onda 2s;
+      animation: onda 2s; }
 
 #header {
   width: 100%;
