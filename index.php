@@ -111,10 +111,10 @@
 
 
 
-<!-- Desde aca va dentro del while -->
-<!-- Las modificaciones van donde hay comentarios...
-dice donde tienes que hacer modificaciones y que necesitamos mostrar -->
-<!-- Las modificaciones son en las lineas: 120, 124, 127, 133, 138, 146. -->
+                <!-- Desde aca va dentro del while -->
+                <!-- Las modificaciones van donde hay comentarios...
+                dice donde tienes que hacer modificaciones y que necesitamos mostrar -->
+                <!-- Las modificaciones son en las lineas: 120, 124, 127, 133, 138, 146. -->
                 <div class="card">
                     <img src="
                     <!-- En esta sección va la imagen -->
@@ -154,7 +154,7 @@ dice donde tienes que hacer modificaciones y que necesitamos mostrar -->
                         </div>
                     </div>
                 </div>
-<!-- Htasta aqui va el while -->
+                <!-- Htasta aqui va el while -->
 
 
 
@@ -170,52 +170,56 @@ dice donde tienes que hacer modificaciones y que necesitamos mostrar -->
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="container-fluid contenedor">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="icono">
-                                <i class="icono far fa-clock"></i>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <p>Cursos rápidos, directo a lo que necesitas</p>
-                        </div>
-                    </div>
+            <div class="col-md-6 contenedor">
+                <div class="icono">
+                    <i class="icono far fa-clock"></i>
+                    <h2 class="color1">Cursos rápidos</h2>
+                    <p>
+                        Aprende rápido, tu tiempo es lo más importante, sin dar vueltas, aprende directo al grano
+                    </p><br>
+                    <p>¡Tu tiempo es importante para nosotros!</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="container-fluid contenedor">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="icono">
-                                <i class="icono fas fa-chart-line"></i>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <p>Mejora tus conocimientos e incrementa tus posibilidades de conseguir mejores puestos.</p>
-                        </div>
-                    </div>
+            <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/39396/hourglass-time-hours-sand-39396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+            </div>
+            <div class="col-md-6 contenedor">
+                <div class="icono">
+                    <i class="icono fas fa-chart-line"></i>
+                    <h2 class="color2">Aumenta tus conocimientos</h2>
+                    <p>¿Te gusta aprender cosas nuevas o mantenerte actualizado?, mejora tu hoja de vida y obten mejores ofertas laborales </p><br>
+                    <p> ¡Este es el lugar perfecto para ti!</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="container-fluid contenedor">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="icono">
-                                <i class="icono far fa-thumbs-up"></i>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <p>Facilidad de aprendizaje, los docentes son especializados en esta área con metodologías de enseñanza aptas para todo publico</p>
-                        </div>
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 contenedor">
+                <div class="icono">
+                    <i class="icono far fa-thumbs-up"></i>
+                    <h2 class="color3">Facilidad de apredizaje</h2>
+                    <p>Te garantizamos que aprenderás facilmente, los docentes son especializados en esta área con metodologías de enseñanza aptas para todo publico</p><br>
+                    <p>¡No esperes más!</p>
                 </div>
+            </div>
+            <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/206585/pexels-photo-206585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container" id="actividades">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">
+                    Conoce lo que hacemos
+                </h1>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -226,13 +230,25 @@ dice donde tienes que hacer modificaciones y que necesitamos mostrar -->
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="First slide">
+                            <img  src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>...</h5>
+                                <p>...</p>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Second slide">
+                            <img  src="https://images.pexels.com/photos/206585/pexels-photo-206585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>...</h5>
+                                <p>...</p>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Third slide">
+                            <img  src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>...</h5>
+                                <p>...</p>
+                            </div>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -243,45 +259,55 @@ dice donde tienes que hacer modificaciones y que necesitamos mostrar -->
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid" id="footer">
+        <div class="row" id="nosotros">
             <div class="col-12">
                 <h2 class="text-center">Nosotros</h2>
             </div>
             <div class="col-md-5">
                 Somos una organización de distintas áreas con Bastánte experiencia en el mercado laboral. <br>
                 Conoce a nuestros docentes especializados en el área y personas que hicieron toda esta institución posible. <br>
-                <h3><a href="" class="btn btn-danger">Conoce mas de cerca a nuestros docentes</a></h3>
+                <h3>
+                    <a href="" class="btn btn-danger">
+                        Conoce de cerca a nuestros docentes
+                    </a
+                ></h3>
             </div>
             <div class="col-md-7">
-                <a href="">
+                <a href="" class="whatsapp">
                     <i class="fab fa-whatsapp"></i> <br>
                     Envianos un mensaje por WhatsApp haciendo clicl aqui <br>
                 </a>
-                <a href="">
+                <a href="" class="facebook">
                     <i class="fab fa-facebook"></i> <br>
                     Conoce nuestra página de facebook y encuentra contenido de interes <br>
                 </a>
-                <a href="">
+                <a href="" class="messenger">
                     <i class="fab fa-facebook-messenger"></i> <br>
                     Envianos un mensaje por Messenger, atenderemos tus dudas, consultas y sugerencias que nos quieras dar. <br>
                 </a>
                 
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="llegar">
             <div class="col-12">
                 <h2 class="text-center">Como llegar</h2>
             </div>
-            <div class="col-md-5">
+            <div class="col-12">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.40901951025!2d-68.1372791708302!3d-16.493954999288746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDI5JzM4LjIiUyA2OMKwMDgnMTIuMiJX!5e0!3m2!1ses!2sbo!4v1556199659805!5m2!1ses!2sbo" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-            <div class="col-md-5">
+            <div class="col-12">
+                <p>
+                   <span>Dirección:</span> Av. Montes 775, Edificio Colonial, segundo mezanine, Oficina 202. 
+                    (estamos a pocos pasos de la pasarela Pérez Velasco) <br> <br>
+                    <span>Contáctanos:</span> 72571093 – 71960432 <br> <br>
+                    <span>LA PAZ - BOLIVIA</span>
+                </p>
             </div>
         </div>
     </div>

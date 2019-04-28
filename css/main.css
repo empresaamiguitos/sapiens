@@ -118,7 +118,7 @@
         -o-transition: all 0.5s;
         transition: all 0.5s; }
         #header .formulario form button.btn:hover {
-          background-color: #c0392b; }
+          background-color: #e5392b; }
   #header .verAbajo {
     position: relative;
     color: #FFFFFF;
@@ -156,14 +156,112 @@
     font-size: 16pt; }
 
 #porque {
-  margin-top: 80px; }
+  margin-top: 80px;
+  text-align: center; }
+  #porque .row {
+    margin-bottom: 50px; }
+    #porque .row:hover .icono, #porque .row:hover img {
+      box-shadow: 0px 0px 10px #99a3a4; }
   #porque h1 {
     margin-bottom: 30px; }
-  #porque .contenedor .icono {
-    padding: 8px;
-    font-size: 35pt; }
-    #porque .contenedor .icono i {
-      border-radius: 50%;
-      background-color: #f4f6f6; }
+  #porque img {
+    margin: auto;
+    max-width: 500px;
+    height: 300px;
+    box-shadow: -2px -2px 8px #99a3a4;
+    -webkit-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s; }
+  #porque .contenedor {
+    vertical-align: center; }
+    #porque .contenedor .icono {
+      padding: 8px;
+      text-align: center;
+      box-shadow: 0px 2px 2px #99a3a4;
+      -webkit-transition: all 0.65s;
+      -ms-transition: all 0.65s;
+      -moz-transition: all 0.65s;
+      -o-transition: all 0.65s;
+      transition: all 0.65s; }
+      #porque .contenedor .icono h2 {
+        border-bottom: 2px solid; }
+        #porque .contenedor .icono h2.color1 {
+          border-color: red; }
+        #porque .contenedor .icono h2.color2 {
+          border-color: blue; }
+        #porque .contenedor .icono h2.color3 {
+          border-color: green; }
+      #porque .contenedor .icono p {
+        font-size: 18spt; }
+      #porque .contenedor .icono i {
+        font-size: 35pt;
+        border-radius: 50%;
+        background-color: #f4f6f6; }
+
+#actividades {
+  margin-bottom: 80px; }
+  #actividades h1 {
+    margin: 50px 0px 50px 0px; }
+  #actividades .carousel {
+    box-shadow: 0px 0px 10px #99a3a4; }
+    #actividades .carousel span {
+      text-shadow: 1px 1px 2px #99a3a4;
+      color: red;
+      background-color: #99a3a4; }
+      #actividades .carousel span:hover {
+        background-color: #000000; }
+    #actividades .carousel .carousel-control-prev-icon, #actividades .carousel .carousel-control-next-icon {
+      border-color: red;
+      box-shadow: 1px 1px 2px #99a3a4;
+      color: red; }
+    #actividades .carousel .carousel-inner .carousel-item {
+      text-align: center; }
+      #actividades .carousel .carousel-inner .carousel-item img {
+        margin: auto;
+        max-height: 350px; }
+
+#footer {
+  background-color: #2c3e50;
+  padding: 50px;
+  color: #FFFFFF;
+  text-align: center; }
+  #footer #nosotros {
+    margin-bottom: 50px; }
+    #footer #nosotros a, #footer #nosotros a:link, #footer #nosotros a:active, #footer #nosotros a:visited {
+      color: #FFFFFF;
+      -webkit-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      display: block; }
+    #footer #nosotros a.whatsapp:hover {
+      color: #25d366; }
+    #footer #nosotros a.facebook:hover {
+      color: #3b5998; }
+    #footer #nosotros a.messenger:hover {
+      color: #0084ff; }
+    #footer #nosotros a:hover {
+      background-color: #FFFFFF;
+      padding: 20px; }
+    #footer #nosotros a.btn {
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      background-color: #e5392b; }
+  #footer #llegar h2 {
+    margin-top: 30px;
+    margin-bottom: 50px; }
+  #footer #llegar iframe {
+    width: 100%;
+    height: 350px;
+    margin: auto; }
+  #footer #llegar p {
+    font-size: 15pt;
+    margin-top: 20px; }
+    #footer #llegar p span {
+      font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */
