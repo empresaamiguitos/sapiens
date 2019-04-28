@@ -18,6 +18,13 @@
 </head>
 <body>
 
+    <div id="contenedor">
+        <div id="carga">
+            <img src="./img/infinitover.png">
+            <h3>CARGANDO</h3>
+        </div>
+    </div>
+
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="menu">
         <a class="navbar-brand" href="index.php">
             <img src="./img/infinitover.png" >
@@ -95,6 +102,31 @@
         <div class="verAbajo">
             <h3>Sigue viendo</h3>
             <h3><i class="fas fa-angle-double-down"></i></h3>
+        </div>
+    </div>
+    <div class="conainer-fluid" id="formPeque">
+        <div class="row">
+            <div class="col-12">
+                <div class="formulario">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp"
+                                placeholder="Nombre Completo" name="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo" name="correo" aria-describedby="emailHelp"
+                                placeholder="Ejemplo@ejemplo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Mensaje</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Ingrese el mesaje o consulta que tenga para nosotros"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
