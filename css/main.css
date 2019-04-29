@@ -68,17 +68,17 @@
   #menu .navbar-collapse .nav-item a.nav-link {
     color: #FFFFFF;
     font-size: 18pt;
-    -webkit-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; }
+    -webkit-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
     #menu .navbar-collapse .nav-item a.nav-link:hover {
-      -webkit-animation: onda 2s;
-      -ms-animation: onda 2s;
-      -moz-animation: onda 2s;
-      -o-animation: onda 2s;
-      animation: onda 2s; }
+      -webkit-transform: scale(1.1);
+      -ms--transform: scale(1.1);
+      -moz--transform: scale(1.1);
+      -o--transform: scale(1.1);
+      -transform: scale(1.1); }
 
 #header {
   width: 100%;
@@ -251,7 +251,7 @@
     -o-transition: all 0.3s;
     transition: all 0.3s; }
     #contenido .card .card-body h5 {
-      height: 90px;
+      height: 170px;
       text-transform: uppercase; }
     #contenido .card img {
       border-bottom: 3.5px solid; }
@@ -280,8 +280,7 @@
     margin-bottom: 30px; }
   #porque img {
     margin: auto;
-    max-width: 500px;
-    height: 300px;
+    max-height: 300px;
     box-shadow: -2px -2px 8px #99a3a4;
     -webkit-transition: all 0.8s;
     -ms-transition: all 0.8s;
@@ -331,7 +330,8 @@
       box-shadow: 1px 1px 2px #99a3a4;
       color: red; }
     #actividades .carousel .carousel-inner .carousel-item {
-      text-align: center; }
+      text-align: center;
+      width: 100%; }
       #actividades .carousel .carousel-inner .carousel-item img {
         margin: auto;
         max-height: 350px; }

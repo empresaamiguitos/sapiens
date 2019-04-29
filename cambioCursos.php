@@ -1,4 +1,5 @@
 <?php
+    require('conexion.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,23 +22,32 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <form action="">
-                    <div class="form-group">
-                        <label for="nombreCurso">Nombre del curso:</label>
-                        <input type="text" class="form-control" name="nombreCurso" id="nombreCurso"
-                            placeholder="Introduzca el nombre del curso">
+            <div class="col-12" style="text-align:center;">
+                <form action="./agregarCurso.php">
+                    <div class="form-group"> 
+                        <label for="nombreC">Nombre:</label>
+                        <input type="text" class="form-control" name="nombreC" id="nombreC">
                     </div>
                     <div class="form-group">
-                        <label for="Contenido">Contenido del curso:</label>
-                        <input type="text" class="form-control" name="Contenido" id="Contenido"
-                            placeholder="Introduzca el contenido del curso">
+                        <label for="inicio">Inicio de clases:</label>
+                        <input type="text" class="form-control" name="inicio" id="inicio">
                     </div>
                     <div class="form-group">
-                        <label for="foto">Ingrese texto la foto del curso:</label>
-                        <input type="file" class="form-control-file" id="foto" name="foto">
+                        <label for="contenido">Contenido:</label>
+                        <input type="text" class="form-control" name="contenido" id="contenido">
                     </div>
-                    <button type="submit" class="btn btn-primary">Crear nuevo curso</button>
+                    <div class="form-group">
+                        <label for="imagenC">Imagen:</label>
+                        <input type="text" class="form-control" name="imagenC" id="imagenC">
+                    </div>
+                    <div class="form-group">
+                        <label for="imagenC">Color:</label>
+                        <input type="text" class="form-control" name="color" id="color">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" >
+                    Crear nuevo curso
+                    </button>
                 </form>
             </div>
         </div>
@@ -48,29 +58,58 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <!-- COMENTARIO, BORRAR ESTA LINEA -->
-                <!-- En la parte de abajo tienes que escoger a que archivo enviar el formulario para modificaciones -->
-                <div class="form-group">
-                    <div class="card">
-                        <form action="cambioCursos.php">
-                            <img src="echo de imagenDB" class="card-img-top color1">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <input type="text" class="form-control" name="nombre" id="nombre" value="">
-                                </h5>
-                                <input type="text" class="form-control" name="contenido" id="contenido">
-                                <input type="hidden" name="idcurso" id="idcurso" value="echo mostrando el id">
-                                <button type="submit" class="btn btn-primary">Cambiar curso</button>
+            <?php
+                $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+                
+                $consulta = "SELECT * FROM curso";
+                $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+	
+                while ($dato = mysqli_fetch_array( $resultado ))
+                {
+                ?>
+                    <div class="col-md-3">
+                        <div class="card" id="curso<?php echo $dato['idCurso']?>">
+                            <img src="<?php echo $dato['imagenC']?>" class="<?php echo $dato['color']?> img-fluid">
+                            <div class="card-body" style="text-align:center;">
+                                <form action="">
+                                    <div class="form-group"> 
+                                        <label for="nombreC">Nombre:</label>
+                                        <input type="text" class="form-control" name="nombreC" id="nombreC" value=" <?php echo $dato['nombreC']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inicio">Inicio de clases:</label>
+                                        <input type="text" class="form-control" name="inicio" id="inicio" value="<?php echo $dato['inicio']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contenido">Contenido:</label>
+                                        <input type="text" class="form-control" name="contenido" id="contenido" value="<?php echo $dato['contenido']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="imagenC">Imagen:</label>
+                                        <input type="text" class="form-control" name="imagenC" id="imagenC" value="<?php echo $dato['imagenC']?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="imagenC">Color:</label>
+                                        <input type="text" class="form-control" name="color" id="color" value="<?php echo $dato['color']?>">
+                                    </div>
+
+                                    <input type="hidden" name="idCruso" id="idCurso" value="<?php echo $dato['idCurso']?>">
+                                    <button type="submit" class="btn btn-primary" >
+                                    Actualizar
+                                    </button>
+                                </form>
+                                <form action="">
+                                    <input type="hidden" name="idCruso" id="idCurso" value="<?php echo $dato['idCurso']?>">
+                                    <button type="submit" class="btn btn-danger" >
+                                    Eliminar
+                                    </button>
+                                </form>
                             </div>
-                        </form>
-                        <form action="eliminarCurso.php">
-                            <button type="submit" class="btn btn-danger">Eliminar curso</button>
-                            <input type="hidden" name="idcurso" id="idcurso" value="echo mostrando el id">
-                        </form>
+                        </div>
                     </div>
-                </div>
-            </div>
+                <?php
+                }
+                ?>
         </div>
     </div>
     

@@ -16,12 +16,12 @@
 </head>
 <body>
 
-    <!-- <div id="contenedor">
+    <div id="contenedor">
         <div id="carga">
             <img src="./img/infinitover.png">
             <h3>CARGANDO</h3>
         </div>
-    </div> -->
+    </div>
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="menu">
         <a class="navbar-brand" href="index.php">
@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="/">Inicio</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,12 +58,12 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Personal</a>
+                    <a class="nav-link" href="docentes.php">Personal</a>
                 </li>
             </ul>
             <ul class="navbar-nav pull-xs-right">
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Direcciones</a>
+                    <a class="nav-link " href="#footer">Direcciones</a>
                 </li>
             </ul>
             
@@ -156,35 +156,38 @@
                 ?>
                     <div class="col-md-3">
                         <div class="card" id="curso<?php echo $dato['idCurso']?>">
-                            <img src="<?php echo $dato['imagenC']?>" class="<?php echo $dato['color']?>">
+                            <img src="<?php echo $dato['imagenC']?>" class="<?php echo $dato['color']?> img-fluid">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <?php echo $dato['nombreC']?>
                                 </h5>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#curso<?php echo $dato['idCurso']?>">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Curso<?php echo $dato['idCurso']?>">
                                 Conoce más
                                 </button>
 
                                 <!-- Modal -->
-                                <div class="modal fade bd-example-modal-lg" id="curso<?php echo $dato['idCurso']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">
-                                            <?php echo $dato['nombreC']?>
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <embed src="<?php echo $dato['contenido']?>" type="application/pdf" width="100%" height="600px" />
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                    </div>
+                                <div class="modal fade bd-example-modal-lg" id="Curso<?php echo $dato['idCurso']?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $dato['idCurso']?>" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="<?php echo $dato['idCurso']?>">
+                                                    <?php echo $dato['nombreC']?>
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <embed src="<?php echo $dato['contenido']?>" width="100%" height="600px"/>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="card-footer text-muted">
+                                    <?php echo $dato['inicio']?>
                                 </div>
                             </div>
                         </div>
@@ -214,12 +217,12 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="https://images.pexels.com/photos/39396/hourglass-time-hours-sand-39396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                <img src="https://images.pexels.com/photos/39396/hourglass-time-hours-sand-39396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid">
             </div>
             <div class="col-md-6 contenedor">
                 <div class="icono">
@@ -240,7 +243,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="https://images.pexels.com/photos/206585/pexels-photo-206585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <img src="https://images.pexels.com/photos/206585/pexels-photo-206585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid">
             </div>
         </div>
     </div>
@@ -254,29 +257,37 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-6">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
                     <?php
                         $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
                         
                         $consulta = "SELECT * FROM actividad";
                         $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-                        $estado;
+                        $estado=true;
                         while ($dato = mysqli_fetch_array( $resultado ))
                         {
                     ?>
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="<?php if($dato['idActividad']==1){$estado=true;} echo $dato['idActividad']-1;?>" class="<?php if($estado){echo "active";}?>"></li>
-                        </ol>
-                        <?php if($estado){echo "<div class=\"carousel-inner\">"; $estado=false;}?>
-
-                            <div class="carousel-item active">
-                                <img  src="<?php echo $dato['fotoA']?>">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5><?php echo $dato['encabezado']?></h5>
-                                    <p><?php echo $dato['descripcion']?></p>
-                                </div>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $dato['idActividad']-1;?>" class="<?php if($estado){echo "active"; $estado=false;}?>"></li>
+                    <?php
+                        }
+                    ?>
+                    </ol>
+                    <div class="carousel-inner">
+                    <?php
+                        $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+                        $estado=true;
+                        while ($dato = mysqli_fetch_array( $resultado ))
+                        {
+                    ?>
+                        <div class="carousel-item <?php if($dato['idActividad']==1){echo "active";$estado=false;}?>">
+                            <img  src="<?php echo $dato['fotoA']?>">
+                            <div class="carousel-caption d-md-block">
+                                <h5><?php echo $dato['encabezado']?></h5>
+                                <p><?php echo $dato['descripcion']?></p>
                             </div>
+                        </div>
                     <?php
                         }
                         mysqli_close( $conexion );
@@ -292,8 +303,18 @@
                         </a>
                 </div>
             </div>
+            <div class="col-md-6" style="margin: auto; text-align: center; heigth: 350px; margin:0; padding:0;">
+                <div class="fb-page" style="box-shadow: 0px 0px 8px #99a3a4 margin:0; padding:0;" data-href="https://www.facebook.com/Sapiens-381716665752030/" data-tabs="timeline" data-width="" data-height="350px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/Sapiens-381716665752030/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/Sapiens-381716665752030/">
+                            Sapiens
+                        </a>
+                    </blockquote>
+                </div>
+            </div>
         </div>
     </div>
+
 
     <div class="container-fluid" id="footer">
         <div class="row" id="nosotros">
@@ -310,19 +331,18 @@
                 ></h3>
             </div>
             <div class="col-md-7">
-                <a href="" class="whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=0123456789" class="whatsapp" target="blank">
                     <i class="fab fa-whatsapp"></i> <br>
                     Envianos un mensaje por WhatsApp haciendo clicl aqui <br>
                 </a>
-                <a href="" class="facebook">
+                <a href="https://www.facebook.com/Sapiens-381716665752030/" class="facebook" target="blank">
                     <i class="fab fa-facebook"></i> <br>
                     Conoce nuestra página de facebook y encuentra contenido de interes <br>
                 </a>
-                <a href="" class="messenger">
+                <a href="https://m.me/381716665752030" class="messenger" target="blank">
                     <i class="fab fa-facebook-messenger"></i> <br>
                     Envianos un mensaje por Messenger, atenderemos tus dudas, consultas y sugerencias que nos quieras dar. <br>
                 </a>
-                
             </div>
         </div>
         <div class="row" id="llegar">
@@ -356,10 +376,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=112716205425245&autoLogAppEvents=1"></script>
         <script src="./js/main.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script>
-            new WOW().init();
-        </script>
 </body>
 </html>
