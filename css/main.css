@@ -378,4 +378,19 @@
     #footer #llegar p span {
       font-weight: bold; }
 
+#docentes .jumbotron {
+  background-image: url("https://images.pexels.com/photos/716276/pexels-photo-716276.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #FFFFFF; }
+
+#personal {
+  background-image: url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); }
+  #personal .col-md-4 {
+    padding: 50px; }
+
 /*# sourceMappingURL=main.css.map */

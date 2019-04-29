@@ -1,7 +1,5 @@
-
 <?php
-//  Las instrucciones estan en la linea 114
-
+    require('conexion.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,12 +16,12 @@
 </head>
 <body>
 
-    <div id="contenedor">
+    <!-- <div id="contenedor">
         <div id="carga">
             <img src="./img/infinitover.png">
             <h3>CARGANDO</h3>
         </div>
-    </div>
+    </div> -->
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="menu">
         <a class="navbar-brand" href="index.php">
@@ -43,11 +41,20 @@
                         Cursos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">  
-                        <a class="dropdown-item" href="#">Curso</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">DERECHO</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">ELABORACIÓN DE TESIS</a>
+                        <?php
+                            $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+
+                            $consulta = "SELECT * FROM curso";
+                            $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+                
+                            while ($dato = mysqli_fetch_array( $resultado ))
+                            {
+                        ?>
+                            <a class="dropdown-item" href="#curso<?php echo $dato['idCurso']?>"><?php echo $dato['nombreC']?></a>
+                            <div class="dropdown-divider"></div>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -138,60 +145,54 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3">
-
-
-
-
-                <!-- Desde aca va dentro del while -->
-                <!-- Las modificaciones van donde hay comentarios...
-                dice donde tienes que hacer modificaciones y que necesitamos mostrar -->
-                <!-- Las modificaciones son en las lineas: 120, 124, 127, 133, 138, 146. -->
-                <div class="card">
-                    <img src="
-                    <!-- En esta sección va la imagen -->
-                    ">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <!-- En esta parte mostrar el nombre del curso -->
-                        </h5>
-                        <!-- En la parte de abajo se modifica los cursos -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<!-- En esta sección va el ID del curso -->">
-                        Conoce más
-                        </button>
-
-                        <!-- Modal -->
-                        <!-- En la parte de abajo se modifica los cursos -->
-                        <div class="modal fade bd-example-modal-lg" id="<!-- En esta sección va el ID del curso -->" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">
-                                    <!-- Nombre del curso mostrado con php "echo array[0]", algo asi -->
+            <?php
+                $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+                
+                $consulta = "SELECT * FROM curso";
+                $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+	
+                while ($dato = mysqli_fetch_array( $resultado ))
+                {
+                ?>
+                    <div class="col-md-3">
+                        <div class="card" id="curso<?php echo $dato['idCurso']?>">
+                            <img src="<?php echo $dato['imagenC']?>" class="<?php echo $dato['color']?>">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <?php echo $dato['nombreC']?>
                                 </h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#curso<?php echo $dato['idCurso']?>">
+                                Conoce más
                                 </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade bd-example-modal-lg" id="curso<?php echo $dato['idCurso']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">
+                                            <?php echo $dato['nombreC']?>
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <embed src="<?php echo $dato['contenido']?>" type="application/pdf" width="100%" height="600px" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <embed src="
-                                <!-- En esta linea mostramos lo que se guarda en el contenido del curso -->
-                                " type="application/pdf" width="100%" height="600px" />
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
-                </div>
-                <!-- Htasta aqui va el while -->
+                <?php
+                }
+                ?>
 
-
-
-
-            </div>
         </div>
     </div>
 
@@ -255,42 +256,40 @@
         <div class="row">
             <div class="col-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img  src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="First slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>...</h5>
-                                <p>...</p>
+                    <?php
+                        $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+                        
+                        $consulta = "SELECT * FROM actividad";
+                        $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+                        $estado;
+                        while ($dato = mysqli_fetch_array( $resultado ))
+                        {
+                    ?>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="<?php if($dato['idActividad']==1){$estado=true;} echo $dato['idActividad']-1;?>" class="<?php if($estado){echo "active";}?>"></li>
+                        </ol>
+                        <?php if($estado){echo "<div class=\"carousel-inner\">"; $estado=false;}?>
+
+                            <div class="carousel-item active">
+                                <img  src="<?php echo $dato['fotoA']?>">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5><?php echo $dato['encabezado']?></h5>
+                                    <p><?php echo $dato['descripcion']?></p>
+                                </div>
                             </div>
+                    <?php
+                        }
+                        mysqli_close( $conexion );
+                    ?>
                         </div>
-                        <div class="carousel-item">
-                            <img  src="https://images.pexels.com/photos/206585/pexels-photo-206585.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Second slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>...</h5>
-                                <p>...</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img  src="https://images.pexels.com/photos/7102/notes-macbook-study-conference.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Third slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>...</h5>
-                                <p>...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                 </div>
             </div>
         </div>
