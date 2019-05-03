@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12" style="text-align:center;">
-                <form action="./agregarCurso.php">
+                <form action="./components/agregarCurso.php" method="POST">
                     <div class="form-group"> 
                         <label for="nombreC">Nombre:</label>
                         <input type="text" class="form-control" name="nombreC" id="nombreC">
@@ -41,12 +41,12 @@
                         <input type="text" class="form-control" name="imagenC" id="imagenC">
                     </div>
                     <div class="form-group">
-                        <label for="imagenC">Color:</label>
+                        <label for="color">Color:</label>
                         <input type="text" class="form-control" name="color" id="color">
                     </div>
 
-                    <button type="submit" class="btn btn-primary" >
-                    Crear nuevo curso
+                    <button type="submit" class="btn btn-primary" name="agregar">
+                        Crear nuevo curso
                     </button>
                 </form>
             </div>
@@ -71,7 +71,7 @@
                         <div class="card" id="curso<?php echo $dato['idCurso']?>">
                             <img src="<?php echo $dato['imagenC']?>" class="<?php echo $dato['color']?> img-fluid">
                             <div class="card-body" style="text-align:center;">
-                                <form action="">
+                                <form action="./components/actualizarCurso.php" method="POST">
                                     <div class="form-group"> 
                                         <label for="nombreC">Nombre:</label>
                                         <input type="text" class="form-control" name="nombreC" id="nombreC" value=" <?php echo $dato['nombreC']?>">
@@ -93,15 +93,15 @@
                                         <input type="text" class="form-control" name="color" id="color" value="<?php echo $dato['color']?>">
                                     </div>
 
-                                    <input type="hidden" name="idCruso" id="idCurso" value="<?php echo $dato['idCurso']?>">
-                                    <button type="submit" class="btn btn-primary" >
+                                    <input type="hidden" name="idCurso" id="idCurso" value="<?php echo $dato['idCurso']?>">
+                                    <button type="submit" class="btn btn-primary" name="actualizar">
                                     Actualizar
                                     </button>
                                 </form>
-                                <form action="">
-                                    <input type="hidden" name="idCruso" id="idCurso" value="<?php echo $dato['idCurso']?>">
-                                    <button type="submit" class="btn btn-danger" >
-                                    Eliminar
+                                <form action="./components/eliminarCurso.php" method="POST">
+                                    <input type="hidden" name="idCurso" id="idCurso" value="<?php echo $dato['idCurso']?>">
+                                    <button type="submit" class="btn btn-danger" name="eliminar">
+                                        Eliminar
                                     </button>
                                 </form>
                             </div>

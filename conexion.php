@@ -1,9 +1,9 @@
 <?php	
-    $usuario = "root";
-    $contrasena = "";  // en mi caso tengo contraseña pero en casa caso introducidla aquí.
+    $usuario = "fundacio_root";
+    $contrasena = "sapiens";  // en mi caso tengo contraseña pero en casa caso introducidla aquí.
     $servidor = "localhost";
-    $basededatos = "sapiens";
+    $basededatos = "fundacio_sapienscursos";
 
-    $conexion = mysqli_connect( $servidor, $usuario, "" ) or die ("No se ha podido conectar al servidor de Base de datos");
+    $conexion = mysqli_connect( $servidor, $usuario, $contrasena ) or die ("No se ha podido conectar al servidor de Base de datos");
     mysqli_query ($conexion,"SET NAMES 'utf8'");
 ?>

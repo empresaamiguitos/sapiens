@@ -1,5 +1,10 @@
 <?php
     require('conexion.php');
+    $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+                        
+    $consulta = "SELECT * FROM datos";
+    $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+    $datos = mysqli_fetch_array($resultado);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,15 +80,8 @@
             <div class="card-body">
                 <h3 class="card-title">SAPIENS</h3>
                 <p class="card-text">
-                    <p>
-                        Bienvenidos a la universidad del conocimiento.
-                    </p>
-                    <p>
-                        Curos de preparación y desarrollo profesional, conoce los cursos que brindamos.
-                    </p>
-                    <p>
-                        Aprende, Mejora Conocimientos y Actualízate.
-                    </p>
+                    <br>
+                    <?php echo $datos['header'];?>
                 </p>
             </div>
         </div>
@@ -211,7 +209,7 @@
                     <i class="icono far fa-clock"></i>
                     <h2 class="color1">Cursos rápidos</h2>
                     <p>
-                        Aprende rápido, tu tiempo es lo más importante, sin dar vueltas, aprende directo al grano
+                        <?php echo $datos['rapido'];?>
                     </p><br>
                     <p>¡Tu tiempo es importante para nosotros!</p>
                 </div>
@@ -228,7 +226,7 @@
                 <div class="icono">
                     <i class="icono fas fa-chart-line"></i>
                     <h2 class="color2">Aumenta tus conocimientos</h2>
-                    <p>¿Te gusta aprender cosas nuevas o mantenerte actualizado?, mejora tu hoja de vida y obten mejores ofertas laborales </p><br>
+                    <p><?php echo $datos['aumenta'];?></p><br>
                     <p> ¡Este es el lugar perfecto para ti!</p>
                 </div>
             </div>
@@ -238,7 +236,7 @@
                 <div class="icono">
                     <i class="icono far fa-thumbs-up"></i>
                     <h2 class="color3">Facilidad de apredizaje</h2>
-                    <p>Te garantizamos que aprenderás facilmente, los docentes son especializados en esta área con metodologías de enseñanza aptas para todo publico</p><br>
+                    <p><?php echo $datos['facil'];?></p><br>
                     <p>¡No esperes más!</p>
                 </div>
             </div>
@@ -322,8 +320,7 @@
                 <h2 class="text-center">Nosotros</h2>
             </div>
             <div class="col-md-5">
-                Somos una organización de distintas áreas con Bastánte experiencia en el mercado laboral. <br>
-                Conoce a nuestros docentes especializados en el área y personas que hicieron toda esta institución posible. <br>
+                <?php echo $datos['nosotros'];?>
                 <h3>
                     <a href="" class="btn btn-danger">
                         Conoce de cerca a nuestros docentes
@@ -354,10 +351,11 @@
             </div>
             <div class="col-12">
                 <p>
-                   <span>Dirección:</span> Av. Montes 775, Edificio Colonial, segundo mezanine, Oficina 202. 
+                    <?php echo $datos['direccion'];?>
+                   <!-- <span>Dirección:</span> Av. Montes 775, Edificio Colonial, segundo mezanine, Oficina 202. 
                     (estamos a pocos pasos de la pasarela Pérez Velasco) <br> <br>
                     <span>Contáctanos:</span> 72571093 – 71960432 <br> <br>
-                    <span>LA PAZ - BOLIVIA</span>
+                    <span>LA PAZ - BOLIVIA</span> -->
                 </p>
             </div>
         </div>

@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="./components/agregarCurso.php" method="POST">
+                <form action="./components/actualizarCurso.php" method="POST">
                     <div class="form-group">
                         <label for="foto">Ingrese el encabezado de la actividad:</label>
                         <input type="text" class="form-control-file" id="titulo" name="titulo">
@@ -44,51 +44,62 @@
     </div>
 
 
-    <h1 class="text-center">Eliminar actividades</h1>
+    <h1 class="text-center">Modificar datos generales de la pagina</h1>
 
     <div class="container">
 
         <?php
             $db = mysqli_select_db( $conexion, $basededatos ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
                         
-            $consulta = "SELECT * FROM actividad";
+            $consulta = "SELECT * FROM datos";
+            $consulta = "SELECT * FROM datos";
             $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-            while ($dato = mysqli_fetch_array( $resultado ))
-            {
+            $dato = mysqli_fetch_array($resultado);
         ?>
             <div class="row">
-                <div class="col-md-7" style="text-align:center;">
-                    <img src="<?php echo $dato['fotoA']?>" style="height: 400px; margin-top:20px;">
-                </div>
-                <div class="col-md-3">
+                
+                <div class="col-12">
                     <form action="./components/actualizarCurso.php" method="POST">
                         <div class="form-group">
-                            <label for="foto">Ingrese el encabezado de la actividad:</label>
-                            <input type="text" class="form-control-file" id="titulo" name="titulo" value="<?php echo $dato['encabezado']?>">
+                            <label for="foto">Datos de bienvenida (parte principal):</label>
+                            <input type="text" class="form-control-file" id="header" name="header" value="<?php echo $dato['header']?>">
                         </div>
                         <div class="form-group">
-                            <label for="contenido">Descripción de la actividad:</label>
-                            <input type="text" class="form-control" name="contenido" id="contenido"
-                                value="<?php echo $dato['descripcion']?>">
+                            <label for="rapido">Datos de cursos rápidos:</label>
+                            <input type="text" class="form-control" name="rapido" id="rapido"
+                                value="<?php echo $dato['rapido']?>">
                         </div>
                         <div class="form-group">
-                            <label for="foto">Ingrese la dirección de la foto:</label>
-                            <input type="text" class="form-control-file" id="foto" name="foto" value="<?php echo $dato['fotoA']?>">
+                            <label for="aumenta">Datos de aumenta tus conocimientos:</label>
+                            <input type="text" class="form-control-file" id="aumenta" name="aumenta" value="<?php echo $dato['aumenta']?>">
                         </div>
-                        <input type="hidden" name="idActividad" id="idActividad" value="<?php echo $dato['idActividad']?>">
-                        <button type="submit" class="btn btn-primary" name="modificarA">Crear actividad nueva</button>
+                        <div class="form-group">
+                            <label for="facil">Datos de aprende fácil:</label>
+                            <input type="text" class="form-control-file" id="facil" name="facil" value="<?php echo $dato['facil']?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="nosotros">Datos de nosotros (Final de la página):</label>
+                            <input type="text" class="form-control-file" id="nosotros" name="nosotros" value="<?php echo $dato['nosotros']?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="direccion">Datos de direccion (final de página):</label>
+                            <input type="text" class="form-control-file" id="direccion" name="direccion" value="<?php echo $dato['direccion']?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="usuario">Nombre de usuario:</label>
+                            <input type="text" class="form-control-file" id="usuario" name="usuario" value="<?php echo $dato['usuario']?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="contrasena">Contraseña:</label>
+                            <input type="text" class="form-control-file" id="contrasena" name="contrasena" value="<?php echo $dato['contrasena']?>">
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="modificarD">Cambiar datos</button>
                     </form>
                     
                 </div>
-                <div class="col-md-1">
-                    <form action="components/eliminarCurso.php" method="POST">
-                        <input type="hidden" name="idActividad" id="idActividad" value="<?php echo $dato['idActividad']?>">
-                        <button type="submit" class="btn btn-danger" name="eliminarA">Eliminar</button>
-                    </form>
-                </div>
             </div>
         <?php
-            }
+            
             mysqli_close( $conexion );
         ?>
 
